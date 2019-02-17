@@ -9,12 +9,12 @@ public class PerfectMatchCalc {
     private int total;
     private Map<Integer, List<Integer>> perfectMatch = new HashMap<Integer, List<Integer>>();
 
-    PerfectMatchCalc(int total, List nums) {
-        this.nums = nums;
-        this.total = total;
+    PerfectMatchCalc() {
     }
 
-    public List calculateList() {
+    public List<Integer> calculateList(int total, List nums) {
+        this.nums = nums;
+        this.total = total;
         Collections.sort(nums);
         for (int i=0; i<nums.size(); i++) {
             getCombinationForIndex(i);
